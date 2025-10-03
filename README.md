@@ -235,7 +235,7 @@ export default function Page() {
 
 ## 🌗 Using Themes in ShadCN + Next.js
 
-### ShadCN components support dark mode out of the box. To manage themes (light/dark/system), the library uses (next-themes)[https://github.com/pacocoursey/next-themes]
+### ShadCN components support dark mode out of the box. To manage themes (light/dark/system), the library uses [next-themes](https://github.com/pacocoursey/next-themes)
 
 ### 1. Install dependencies
 
