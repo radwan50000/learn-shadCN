@@ -279,10 +279,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 ```
 
 
-## 3. Create ``` theme-provider.tsx ```
+## 3. Create  theme-provider.tsx
 
 <h4>
-  Inside ``` components/ ``` :
+  Inside components/ :
 </h4>
 
 ```tsx
