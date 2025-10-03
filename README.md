@@ -150,3 +150,22 @@ export default function Page() {
 }
 
 ```
+
+## Adding Icons 
+
+> if we want to add icons to the element it's ease **ShadCN** is using open source library called Lucide [https://lucide.dev/] just copy the JSX format and add the to the code like that :
+
+```tsx
+import { Button } from "@/components/ui/button"
+import { ArrowBigUp } from "lucide-react";
+
+export default function Page() {
+  return (
+    <Button disabled>
+      <ArrowBigUp />
+      Click Me
+    </Button>
+  )
+}
+
+```
