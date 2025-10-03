@@ -193,3 +193,20 @@ export default function Page() {
   )
 }
 ```
+
+
+### Change Color
+
+> To change color simply add ``` variant ```  attribute
+
+```tsx
+import { Button } from "@/components/ui/button"
+
+export default function Page() {
+  return (
+    <Button variant='destructive'>
+      Click Me
+    </Button>
+  )
+}
+```
