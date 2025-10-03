@@ -249,7 +249,7 @@ npm install next-themes
 ## 2. Wrap your app with ``` ThemeProvider ```
 
 <h4>
-  In ``` app/layout.tsx ```  (or ``` app/providers.tsx ``` if you split it):
+  In app/layout.tsx (or app/providers.tsx if you split it):
 </h4>
 
 ```tsx
