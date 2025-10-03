@@ -135,7 +135,7 @@ export default function Page() {
 
 <hr>
 
-** as Button is Rendered as Button Element in the HTML in final we can also adding the ``` disabled ``` attribute to it **
+**as Button is Rendered as Button Element in the HTML in final we can also adding the ``` disabled ``` attribute to it**
 
 ```tsx
 
