@@ -135,6 +135,28 @@ export default function Page() {
 
 <hr>
 
+## What is 'sr-only'
+
+> **``` sr-only ```** is using to the people who didn't see (blind) and use the screen reader of the website it's make the text hidden but readable by the screen reader to help those people , Example :
+
+```tsx
+import { Button } from "@/components/ui/button"
+import { ArrowBigUp } from "lucide-react";
+
+export default function Page() {
+  return (
+    <Button disabled>
+      <ArrowBigUp />
+      Login
+      <span className='sr-only'> Login Button </span>
+    </Button>
+  )
+}
+
+```
+
+<hr>
+
 **as Button is Rendered as Button Element in the HTML in final we can also adding the ``` disabled ``` attribute to it**
 
 ```tsx
