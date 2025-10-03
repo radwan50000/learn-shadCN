@@ -132,3 +132,19 @@ export default function Page() {
 
 👉 **In short:**  
 `asChild` makes the component a wrapper that passes its styles/props to the child element you provide.
+
+** as Button is Rendered as Button Element in the HTML in final we can also adding the ``` disabled ``` attribute to it
+
+```tsx
+
+import { Button } from "@/components/ui/button"
+
+export default function Page() {
+  return (
+    <Button disabled>
+      Click Me
+    </Button>
+  )
+}
+
+```
