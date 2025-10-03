@@ -237,7 +237,7 @@ export default function Page() {
 
 ### ShadCN components support dark mode out of the box. To manage themes (light/dark/system), the library uses [next-themes](https://github.com/pacocoursey/next-themes)
 
-### 1. Install dependencies
+## 1. Install dependencies
 
 ```bash
 
@@ -246,4 +246,134 @@ npm install next-themes
 
 ```
 
-### 2. Wrap your app with ``` ThemeProvider ```
+## 2. Wrap your app with ``` ThemeProvider ```
+
+<h4>
+  In ``` app/layout.tsx ```  (or ``` app/providers.tsx ``` if you split it):
+</h4>
+
+```tsx
+
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          // superHydrationWarning is dev-only (optional)
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  )
+}
+
+
+```
+
+
+## 3. Create ``` theme-provider.tsx ```
+
+<h4>
+  Inside ``` components/ ``` :
+</h4>
+
+```tsx
+
+"use client"
+
+import * as React from "react"
+import { ThemeProvider as NextThemesProvider } from "next-themes"
+import { type ThemeProviderProps } from "next-themes/dist/types"
+
+export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+}
+
+
+```
+
+
+## 4. Add a Theme Toggle (Light/Dark Switch)
+
+```tsx
+
+"use client"
+
+import { useTheme } from "next-themes"
+import { Sun, Moon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+export function ThemeToggle() {
+  const { theme, setTheme } = useTheme()
+
+  return (
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    >
+      <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+      <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <span className="sr-only">Toggle theme</span>
+    </Button>
+  )
+}
+
+
+```
+
+
+### 5. Tailwind Config
+
+```tsx
+
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+
+```
+
+
+## 6. Common Options in ThemeProvider
+
+<ul>
+
+<li>
+attribute="class" → toggles class="light" / class="dark"
+</li>
+
+<li>
+defaultTheme="system" → follows system theme if no preference is saved
+</li>
+
+<li>
+enableSystem → allows detecting OS preference
+</li>
+
+<li>
+disableTransitionOnChange → removes ugly transition flicker
+</li>
+
+<li>
+superHydrationWarning → dev-only console warning if SSR theme ≠ client theme
+</li>
+
+</ul>
