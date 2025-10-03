@@ -169,3 +169,27 @@ export default function Page() {
 }
 
 ```
+## CN - Class Name Merging
+
+> When we install ShadeCN their is a folder called 📂**lib** have a file called 🖹**utils.ts** this allow us to make conditions when typing the tailwind with good way :
+
+```tsx
+
+import { Button } from "@/components/ui/button"
+import { ArrowBigUp } from "lucide-react";
+import {useState} from 'react';
+
+export default function Page() {
+  const [number , setNumber] = useState<number>(0);
+
+  return (
+    <Button
+      className={cn('m-8' , number ? 'bg-red-600':null)}
+      onClick={() => setNumber(perv => perv + 1)}
+    >
+      <ArrowBigUp />
+      Click Me
+    </Button>
+  )
+}
+```
