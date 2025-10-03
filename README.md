@@ -184,7 +184,7 @@ export default function Page() {
 
   return (
     <Button
-      className={cn('m-8' , number ? 'bg-red-600':null)}
+      className={cn('m-8' , number ? 'bg-red-600':null , 'p-8' , number > 10 ? 'bg-gree-800':null)}
       onClick={() => setNumber(perv => perv + 1)}
     >
       <ArrowBigUp />
