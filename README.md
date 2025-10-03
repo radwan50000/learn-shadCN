@@ -12,7 +12,7 @@
 
 ### ShadCN Comes with some default props that can change in setting , Example:
 
-```
+```tsx
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
