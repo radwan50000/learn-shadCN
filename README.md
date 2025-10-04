@@ -377,3 +377,22 @@ superHydrationWarning → dev-only console warning if SSR theme ≠ client theme
 </li>
 
 </ul>
+
+## Sidebar
+
+> Side Bar is Important Thing and it's very beauty and usefull U can use it from here https://ui.shadcn.com/docs/components/sidebar
+
+### Important Topic U must know in it
+
+<ul>
+  <li>
+    SideBar Structure
+  </li>
+  <li>
+    SideBar with using drop down menu
+  </li>
+  <li>
+    SideBar Actions (very Usefull)
+  </li>
+  
+</ul>
