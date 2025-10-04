@@ -389,6 +389,9 @@ superHydrationWarning → dev-only console warning if SSR theme ≠ client theme
     SideBar Structure
   </li>
   <li>
+    SideBar Provider
+  </li>
+  <li>
     SideBar with using drop down menu
   </li>
   <li>
