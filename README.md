@@ -392,6 +392,9 @@ superHydrationWarning → dev-only console warning if SSR theme ≠ client theme
     SideBar Provider
   </li>
   <li>
+    Using Custom Button Toggle Button by useSideBar() hook
+  </li>
+  <li>
     SideBar with using drop down menu
   </li>
   <li>
