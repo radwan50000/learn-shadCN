@@ -400,5 +400,7 @@ superHydrationWarning → dev-only console warning if SSR theme ≠ client theme
   <li>
     SideBar Actions (very Usefull)
   </li>
-  
+  <li>
+    Collabsable SideBar Group
+  </li>
 </ul>
